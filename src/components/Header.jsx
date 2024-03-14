@@ -6,7 +6,7 @@ export const Header = () => {
       <nav>
 
 
-      <p className="leading">Enciclopedia Starwars</p> 
+      <p className="leading">Enciclopedia <span>Starwars</span></p> 
 
     <div className="actions">
 
