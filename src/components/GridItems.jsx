@@ -1,19 +1,23 @@
 import { CardItem } from "./CardItem";
-import { swapiToCharMapper } from "../infrastructure/mappers/swapiToCharMapper";
-import { useFetchChars } from "../hooks/useFetchChars";
 
+export const GridItems = ({ state, nextPage, previousPage, page, isLoading }) => {
 
+  const isEmpty = state.length === 0;
 
-export const GridItems = () => {
-  const { state, nextPage, previousPage, page } = useFetchChars();
   return (
     <>
+     {
+      isLoading
+      && ( <div className="loading"><h3>Cargando...</h3></div> )
+     } 
+      
+     {
+      isEmpty && <div className="loading">No hay personajes para este genero</div>
+     }
     <div className="grid-items" >
       {
-        state.map( char =>  {
-          const newChar = swapiToCharMapper( char );
-          return (<CardItem char={newChar} key={newChar.name}/>);
-        })
+      
+      state.map( char =>  (<CardItem char={char} key={char.name}/>))
         
       }
     </div>

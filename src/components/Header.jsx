@@ -1,5 +1,6 @@
+import { useFetchChars } from "../hooks/useFetchChars"
 
-export const Header = () => {
+export const Header = ({ changeFilter, filter }) => {
   return (
     <header>
       <img src="public/assets/header.png" alt="starwars" />
@@ -10,9 +11,15 @@ export const Header = () => {
 
     <div className="actions">
 
-    <label htmlFor="filtros">Filtros</label>
-    <select name="filtros" id="filters">
-      <option value="">Todos</option>
+
+    <select name="filtros" id="filters" onChange={ ( event ) => {
+      changeFilter( event.target.value ),
+      console.log(filter);
+    } } >
+    <option value="all">Todos</option>
+    <option value="male">Hombre</option>
+    <option value="female">Mujer</option>
+
     </select>
 
       <form>
