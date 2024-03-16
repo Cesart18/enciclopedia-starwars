@@ -52,7 +52,6 @@ export const useFetchChars = () => {
       setFilter( filter );
       getNewChars(filter);
     }
-
       return {
         state,
         isLoading,

@@ -21,11 +21,6 @@ export const Header = ({ changeFilter, filter }) => {
     <option value="female">Mujer</option>
 
     </select>
-
-      <form>
-      <input type="text" />
-      <button>Buscar</button>
-      </form>
     </div>
       </nav>
     </header>

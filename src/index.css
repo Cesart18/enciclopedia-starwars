@@ -65,6 +65,11 @@ h3{
 p{
   font-size: 20px;
 }
+select{
+  padding: 5px 10px;
+  font-size: 20px;
+}
+
 
 .grid-items{
   display: grid;
@@ -72,8 +77,8 @@ p{
   grid-auto-rows: 250px;
   justify-content: center;
   align-content: center;
-  padding: 20px;
-  gap: 10px;
+  padding: 30px;
+  gap: 30px;
 }
 
 .pagination{
@@ -90,7 +95,13 @@ p{
   border-radius: 10px;
   padding: 10px 20px;
   gap: 10px;
+  cursor: pointer;
 }
+.card:hover{
+  border-color: yellow;
+  color: yellow;
+}
+
 
 .loading{
   height: 50vh;
