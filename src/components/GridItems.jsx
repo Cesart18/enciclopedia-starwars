@@ -1,7 +1,9 @@
+
+import { useState } from "react";
 import { CardItem } from "./CardItem";
 
 export const GridItems = ({ state, nextPage, previousPage, page, isLoading }) => {
-
+  const [showModal, setShowModal] = useState(false);
   const isEmpty = state.length === 0;
 
   return (
@@ -17,7 +19,7 @@ export const GridItems = ({ state, nextPage, previousPage, page, isLoading }) =>
     <div className="grid-items" >
       {
       
-      state.map( char =>  (<CardItem char={char} key={char.name}/>))
+      state.map( char =>  (<CardItem char={char} key={char.name} setShowModal={setShowModal} showModal={showModal}/>))
         
       }
     </div>
