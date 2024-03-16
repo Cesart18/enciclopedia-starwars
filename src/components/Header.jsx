@@ -13,8 +13,8 @@ export const Header = ({ changeFilter, filter }) => {
 
 
     <select name="filtros" id="filters" onChange={ ( event ) => {
-      changeFilter( event.target.value ),
-      console.log(filter);
+      changeFilter( event.target.value )
+
     } } >
     <option value="all">Todos</option>
     <option value="male">Hombre</option>
